@@ -1,22 +1,10 @@
-import React from "react";
-import { Navbar7 } from "./components/Navbar7";
-import { Header30 } from "./components/Header30";
-import { Layout22 } from "./components/Layout22";
-import { Layout138 } from "./components/Layout138";
-import { Layout239 } from "./components/Layout239";
-import { Contact6 } from "./components/Contact6";
-import { Footer1 } from "./components/Footer1";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Page from './src/Page';
+import './index.css';
 
-export default function Page() {
-  return (
-    <div>
-      <Navbar7 />
-      <Header30 />
-      <Layout22 />
-      <Layout138 />
-      <Layout239 />
-      <Contact6 />
-      <Footer1 />
-    </div>
-  );
-}
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Page />
+  </React.StrictMode>
+);
