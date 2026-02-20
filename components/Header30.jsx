@@ -5,34 +5,26 @@ import React from "react";
 
 export function Header30() {
   return (
-    <section id="relume" className="relative px-[5%]">
+    <section id="relume" className="relative px-[5%] bg-yu-beige/50">
       <div className="container relative z-10">
-        <div className="flex max-h-[60rem] min-h-svh items-center justify-center py-16 text-center md:py-24 lg:py-28">
-          <div className="w-full max-w-lg">
-            <h1 className="mb-5 text-6xl font-bold text-text-alternative md:mb-6 md:text-9xl lg:text-10xl">
-              Architecting the future of digital commerce.
+        <div className="flex max-h-[60rem] min-h-svh items-center justify-center py-24 md:py-32 lg:py-40 text-center">
+          <div className="w-full max-w-3xl">
+            <h1 className="mb-6 text-5xl font-bold text-white font-serif md:mb-8 md:text-7xl lg:text-8xl tracking-tighter leading-[1.1]">
+              Where Unique Ideas <br /> Root and Flourish.
             </h1>
-            <p className="text-text-alternative md:text-md">
-              From innovative product incubation to global marketplace
-              dominance. yuunique is where unique ideas meet scalable e-commerce
-              excellence.
+            <p className="text-white/80 md:text-xl max-w-lg mx-auto font-sans leading-relaxed tracking-wide">
+              yuunique goes beyond selling products; we discover special value in everyday life. Complete your own unique lifestyle with our carefully curated items.
             </p>
-            <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-              <Button title="Explore">Explore</Button>
-              <Button title="Partner" variant="secondary-alt">
-                Partner
-              </Button>
-            </div>
           </div>
         </div>
       </div>
       <div className="absolute inset-0 z-0">
         <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          src="/images/hero-bg.jpg"
           className="size-full object-cover"
-          alt="Relume placeholder image"
+          alt="yuunique brand background"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
     </section>
   );

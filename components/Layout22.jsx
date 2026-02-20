@@ -6,49 +6,33 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Layout22() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="about" className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <div className="rb-5 mb-5 md:mb-6">
+            <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                className="size-20"
-                alt="Relume logo"
+                src="/images/logo_wo_back.png"
+                className="h-12 w-auto opacity-90"
+                alt="yuunique logo"
               />
             </div>
-            <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Built on the principle of bringing unique value.
+            <h2 className="mb-6 text-4xl font-bold font-serif text-yu-black md:mb-8 md:text-6xl lg:text-7xl tracking-tight leading-[1.1]">
+              Unique Value, <br /> <span className="text-yu-green italic">Intelligent Growth.</span>
             </h2>
-            <p className="md:text-md">
-              yuunChloe emerged from a simple belief: the best products solve
-              real problems with elegance. We've spent years mastering the
-              Amazon FBA ecosystem, understanding what moves markets, and
-              building brands that matter. Our data-driven approach to product
-              selection and brand scaling has proven itself across home
-              organization, baby essentials, and premium cosmetics. We don't
-              just sell; we architect commerce strategies that grow.
+            <p className="md:text-lg text-yu-black/70 leading-relaxed font-sans mb-8">
+              yuunChloe goes beyond being a simple e-commerce company; we aim for a harmony of data and intuition. Combining deep understanding of the Amazon FBA ecosystem with AI/ML engineering technology, we read market trends and create unique value essential for daily life. We design and grow every single product to bring positive change to our customers' lives.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn more" variant="secondary">
-                Learn more
-              </Button>
-              <Button
-                title="Arrow"
-                variant="link"
-                size="link"
-                iconRight={<RxChevronRight />}
-              >
-                Arrow
-              </Button>
-            </div>
           </div>
-          <div>
+          <div className="relative pl-4 md:pl-0">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              className="w-full object-cover"
-              alt="Relume placeholder image"
+              src="/images/about-image.jpg"
+              className="w-full rounded-3xl shadow-xl object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-500"
+              alt="yuunChloe brand vision"
             />
+            <div className="absolute -bottom-8 -left-8 bg-yu-beige p-8 rounded-tr-3xl rounded-bl-3xl shadow-lg border border-white/50 hidden lg:block">
+              <p className="text-yu-black font-serif text-2xl italic leading-none">"Beyond the Ordinary."</p>
+            </div>
           </div>
         </div>
       </div>

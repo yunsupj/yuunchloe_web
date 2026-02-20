@@ -4,134 +4,80 @@ import { Button, Input } from "@relume_io/relume-ui";
 import React, { useState } from "react";
 import { BiLogoInstagram, BiLogoYoutube } from "react-icons/bi";
 
-const useForm = () => {
+export function Footer1() {
   const [email, setEmail] = useState("");
-  const handleSetEmail = (event) => {
-    setEmail(event.target.value);
-  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ email });
+    console.log("Subscribed:", email);
+    setEmail("");
   };
-  return {
-    email,
-    handleSetEmail,
-    handleSubmit,
-  };
-};
 
-export function Footer1() {
-  const formState = useForm();
   return (
-    <footer id="relume" className="px-[5%] py-12 md:py-18 lg:py-20">
+    <footer className="px-[5%] py-12 md:py-18 lg:py-20 bg-yu-beige border-t border-yu-brown/10">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4 lg:pb-20">
-          <div className="flex flex-col">
-            <a href="#" className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-                alt="Logo image"
-                className="inline-block"
-              />
-            </a>
-            <p className="mb-5 md:mb-6">
-              Get insights on commerce trends and brand growth.
-            </p>
-            <div className="w-full max-w-md">
-              <form
-                className="mb-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-[1fr_max-content] md:gap-y-4"
-                onSubmit={formState.handleSubmit}
-              >
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Your email"
-                  value={formState.email}
-                  onChange={formState.handleSetEmail}
+          <div>
+            <div className="mb-6 md:mb-8">
+              <a href="#" className="mb-5 md:mb-6 block">
+                <img
+                  src="/images/logo_wo_back.png"
+                  alt="yuunique logo"
+                  className="h-10 w-auto opacity-80"
                 />
-                <Button title="Subscribe" variant="secondary" size="sm">
+              </a>
+              <p className="mb-6 md:mb-8 font-serif italic text-lg text-yu-black/80">"Beyond the Ordinary."</p>
+            </div>
+            <div className="mb-6 md:mb-8">
+              <p className="mb-3 font-semibold md:mb-4 font-sans text-yu-black">Subscribe</p>
+              <p className="mb-3 md:mb-4 text-yu-black/70 font-sans text-sm">
+                Subscribe to get insights on commerce trends and brand growth.
+              </p>
+              <div className="flex max-w-md gap-2">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-white border-yu-brown/20 focus:border-yu-green font-sans"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <Button
+                  className="bg-yu-black text-white hover:bg-yu-green transition-colors border-none font-sans"
+                  onClick={handleSubmit}
+                >
                   Subscribe
                 </Button>
-              </form>
-              <p className="text-xs">
-                By subscribing you agree to our Privacy Policy and consent to
-                receive updates from yuunChloe.
+              </div>
+              <p className="mt-3 text-xs text-yu-black/50 font-sans">
+                By subscribing you agree to receive updates from yuunChloe and accept our Privacy Policy.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 items-start gap-y-10 sm:grid-cols-3 sm:gap-x-6 md:gap-x-8 md:gap-y-4">
+          <div className="grid grid-cols-1 items-start justify-end gap-y-10 sm:grid-cols-3 sm:gap-x-12 sm:gap-y-12 md:gap-x-20 md:gap-y-16">
             <div className="flex flex-col items-start justify-start">
-              <h2 className="mb-3 font-semibold md:mb-4">Company</h2>
-              <ul>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <span>About us</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <span>Privacy policy</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <span>Our brands</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <span>Contact</span>
-                  </a>
-                </li>
+              <h3 className="mb-3 font-semibold md:mb-4 text-yu-black font-sans">Menu</h3>
+              <ul className="flex flex-col items-start justify-start gap-y-2">
+                <li className="py-2"><a href="/" className="font-sans text-yu-black/70 hover:text-yu-green transition-colors">Home</a></li>
+                <li className="py-2"><a href="#about" className="font-sans text-yu-black/70 hover:text-yu-green transition-colors">About</a></li>
+                <li className="py-2"><a href="#contact" className="font-sans text-yu-black/70 hover:text-yu-green transition-colors">Contact</a></li>
               </ul>
             </div>
+
             <div className="flex flex-col items-start justify-start">
-              <h2 className="mb-3 font-semibold md:mb-4">Resources</h2>
-              <ul>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <span>FAQ</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <span>Support</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col items-start justify-start">
-              <h2 className="mb-3 font-semibold md:mb-4">Follow us</h2>
-              <ul className="flex flex-col items-start">
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <BiLogoInstagram className="size-6" />
-                    <span>Instagram</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm">
-                  <a href="#" className="flex items-center gap-3">
-                    <BiLogoYoutube className="size-6" />
-                    <span>YouTube</span>
-                  </a>
-                </li>
+              <h3 className="mb-3 font-semibold md:mb-4 text-yu-black font-sans">Legal</h3>
+              <ul className="flex flex-col items-start justify-start gap-y-2">
+                <li className="py-2"><a href="/privacy-policy" className="font-sans text-yu-black/70 hover:text-yu-green transition-colors">Privacy Policy</a></li>
+                <li className="py-2"><a href="/terms-of-service" className="font-sans text-yu-black/70 hover:text-yu-green transition-colors">Terms of Service</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="h-px w-full bg-black" />
-        <div className="flex flex-col-reverse items-start justify-between pb-4 pt-6 text-sm md:flex-row md:items-center md:pb-0 md:pt-8">
-          <p className="mt-6 md:mt-0">© 2024 Relume. All rights reserved.</p>
-          <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
-            <li className="underline">
-              <a href="#">Privacy policy</a>
-            </li>
-            <li className="underline">
-              <a href="#">Terms of service</a>
-            </li>
-            <li className="underline">
-              <a href="#">Cookie settings</a>
-            </li>
+        <div className="h-px w-full bg-yu-brown/10" />
+        <div className="flex flex-col-reverse items-start justify-between pb-4 pt-6 text-sm md:flex-row md:items-center md:pb-0 md:pt-8 text-yu-brown/60">
+          <p className="mt-6 md:mt-0">© 2026 yuunChloe LLC. All rights reserved.</p>
+          <ul className="flex gap-x-6">
+            <li className="underline cursor-pointer hover:text-yu-green transition-colors font-sans"><a href="/privacy-policy">Privacy policy</a></li>
+            <li className="underline cursor-pointer hover:text-yu-green transition-colors font-sans"><a href="/terms-of-service">Terms of service</a></li>
           </ul>
         </div>
       </div>
