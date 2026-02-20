@@ -34,7 +34,7 @@ export function Contact6() {
           <div className="grid grid-cols-1 gap-4 py-2 text-yu-black font-sans">
             <div className="flex items-center gap-4">
               <BiEnvelope className="size-6 flex-none text-yu-green" />
-              <p>contact@yuunchloe.com</p>
+              <p>info@yuunchloe.com</p>
             </div>
             <div className="flex items-center gap-4">
               <BiMap className="size-6 flex-none text-yu-green" />
